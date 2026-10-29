@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
 
-    services:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -33,6 +32,6 @@ jobs:
         run: npm run test:qa
         env:
           TEST_ENV: qa
-          BASE_URL: ${{ secrets.BASE_URL }}
-          AUTH_USERNAME: ${{ secrets.AUTH_USERNAME }}
-          AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}
+          BASE_URL: ${{vars.BASEURL }}
+          AUTH_USERNAME: ${{ secrets.USENAME }}
+          AUTH_PASSWORD: ${{ secrets.PASSWORD }}
