@@ -33,6 +33,6 @@ jobs:
         run: npm run test:qa
         env:
           TEST_ENV: qa
-          BASE_URL: ${{ ver.BASE_URL }}
-          AUTH_USERNAME: ${{ secrets.AUTH_USERNAME }}
-          AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}
+          BASE_URL: ${{vars.BASEURL }}
+          AUTH_USERNAME: ${{ secrets.USENAME }}
+          AUTH_PASSWORD: ${{ secrets.PASSWORD }}
