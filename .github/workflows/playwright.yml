@@ -34,4 +34,8 @@ jobs:
           TEST_ENV: qa
           BASE_URL: ${{vars.BASEURL }}
           AUTH_USERNAME: ${{ secrets.USENAME }}
+<<<<<<< HEAD
           AUTH_PASSWORD: ${{ secrets.PASSWORD }}
+=======
+          AUTH_PASSWORD: ${{ secrets.PASSWORD }}
+>>>>>>> 5a11f7c66feaf6723bf7dc6836e1bde482f3a8b0
