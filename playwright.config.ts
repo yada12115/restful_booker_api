@@ -6,6 +6,7 @@ import { env } from "./config/env";
  */
 export default defineConfig({
   testDir: './tests',
+  testMatch: '**/*.spec.ts',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -18,6 +19,9 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+ 
+     baseURL: env.baseUrl,
+
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -28,7 +32,7 @@ export default defineConfig({
       Accept: 'application/json', 
       'Content-Type': 'application/json',
     },
-    baseURL: env.baseUrl,
+   
   },
 
   /* Configure projects for major browsers */
